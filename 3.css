@@ -1,0 +1,51 @@
+body{
+	background-color:lightgrey;
+	font-family:'Times New Roman'
+}
+
+h1 {
+	color: mediumvioletred;
+	text-align: center;
+}
+	h2{
+		color:mediumvioletred;
+		text-align:left;
+	}
+	h3{
+		color:mediumvioletred;
+
+	}
+p {
+	font-family: 'Times New Roman';
+	font-size: 20px;
+	color:blue
+}
+a:link {
+	color: red;
+}
+ ul li{
+	 color:blue;
+	 font-size:20px;
+ }
+ol li {
+	color: blue;
+	font-size: 20px;
+}
+th {
+	background-color: mediumvioletred;
+	color: white;
+}
+td {
+	font-family: 'Times New Roman';
+	font-size: 20px;
+	color: blue
+}
+video, iframe {
+	display: block;
+	margin: 20px auto;
+	max-width: 100%;
+}
+a:hover {
+	color: orange;
+}
+
