@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Open and Close Window</title>
+</head>
+<body>
+    <h1>Open and Close a New Window</h1>
+    <button id="openWindowBtn">Open and Close Window</button>
+
+    <script>
+        let newWindow;
+
+        // Function to open a new window and then close it after 3 seconds
+        function openAndCloseWindow() {
+            // Open a new window
+            newWindow = window.open('', '_blank', 'width=400,height=300');
+            newWindow.document.write('<h1>This is a new window!</h1><p>The window will close automatically in 3 seconds.</p>');
+
+            // Close the window after 3 seconds
+            setTimeout(() => {
+                newWindow.close();
+            }, 3000);
+        }
+
+        // Attach the event to the button
+        document.getElementById('openWindowBtn').addEventListener('click', openAndCloseWindow);
+    </script>
+</body>
+</html>

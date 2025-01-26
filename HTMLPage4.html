@@ -1,0 +1,34 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Session Visit Counter</title>
+</head>
+<body>
+    <h1>Page Visit Tracker</h1>
+    <p><strong>Number of times you've visited this page in this session:</strong> <span id="visitCount"></span></p>
+
+    <script>
+        // Check if "pageVisits" exists in sessionStorage
+        let visitCount = sessionStorage.getItem("pageVisits");
+
+        // If it doesn't exist, initialize it to 1
+        if (!visitCount) {
+            visitCount = 1;
+        } else {
+            // If it exists, increment it
+            visitCount = parseInt(visitCount) + 1;
+        }
+
+        // Store the updated count back in sessionStorage
+        sessionStorage.setItem("pageVisits", visitCount);
+
+        // Display the visit count
+        document.getElementById("visitCount").textContent = visitCount;
+
+        // Log the count to the console
+        console.log("Number of times this page has been visited in this session:", visitCount);
+    </script>
+</body>
+</html>

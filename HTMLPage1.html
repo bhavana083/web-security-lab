@@ -1,0 +1,21 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Logger</title>
+</head>
+<body>
+    <h1>Check Console for URL and Parameters</h1>
+    <script>
+        // Log the current URL
+        console.log("Current URL:", window.location.href);
+
+        // Extract and log query parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        urlParams.forEach((value, key) => {
+            console.log(`Parameter: ${key}, Value: ${value}`);
+        });
+    </script>
+</body>
+</html>

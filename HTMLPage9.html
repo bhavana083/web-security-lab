@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Timeout Simulation</title>
+</head>
+<body>
+    <h1>Simulate Login Timeout</h1>
+    <p>You've been logged in. If you stay inactive for 10 seconds, you will be logged out.</p>
+    <p id="timeoutMessage"></p>
+
+    <script>
+        let timeoutMessage = document.getElementById("timeoutMessage");
+        let timeoutTimer; // Variable to store the timeout timer
+        let timeoutDuration = 10000; // 10 seconds timeout duration
+
+        // Function to simulate a timeout (i.e., user is logged out)
+        function simulateTimeout() {
+            timeoutMessage.textContent = "You have been logged out due to inactivity.";
+            console.log("Session Timed Out!");
+            alert("Session Timed Out! You have been logged out.");
+        }
+
+        // Function to reset the timeout timer
+        function resetTimer() {
+            console.log("Resetting timeout...");
+            clearTimeout(timeoutTimer); // Clear the previous timer
+            timeoutMessage.textContent = "Session Active. You are logged in.";
+
+            // Set a new timeout
+            timeoutTimer = setTimeout(simulateTimeout, timeoutDuration);
+        }
+
+        // Set initial timeout when the page loads
+        resetTimer();
+
+        // Reset the timer on various user interactions
+        window.addEventListener('mousemove', resetTimer);
+        window.addEventListener('keypress', resetTimer);
+        window.addEventListener('click', resetTimer);
+        window.addEventListener('scroll', resetTimer);
+    </script>
+</body>
+</html>

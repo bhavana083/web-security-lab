@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Top</title>
+</head>
+<body>
+    <h1>Scroll to the Top</h1>
+    <p>Scroll down the page and click the button to scroll back to the top.</p>
+    <button id="scrollTopBtn">Scroll to Top</button>
+
+    <div style="height: 1500px;">Content here to make the page scrollable...</div>
+
+    <script>
+        // Function to scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo(0, 0); // This scrolls to the top (without smooth scrolling)
+            // Alternative with smooth behavior (for modern browsers):
+            // window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Attach the event to the button
+        document.getElementById('scrollTopBtn').addEventListener('click', scrollToTop);
+    </script>
+</body>
+</html>

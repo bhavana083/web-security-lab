@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Domain and Origin Logger</title>
+</head>
+<body>
+    <h1>Domain and Origin Information of Example.com</h1>
+    <p><strong>Domain:</strong> <span id="domain"></span></p>
+    <p><strong>Origin:</strong> <span id="origin"></span></p>
+
+    <script>
+        // Set the URL to https://example.com
+        const url = new URL("https://example.com");
+
+        // Extract domain and origin
+        const domain = url.hostname;   // Get domain (e.g., example.com)
+        const origin = url.origin;     // Get origin (e.g., https://example.com)
+
+        // Log to console
+        console.log("Domain:", domain);
+        console.log("Origin:", origin);
+
+        // Display domain and origin on the webpage
+        document.getElementById("domain").textContent = domain;
+        document.getElementById("origin").textContent = origin;
+    </script>
+</body>
+</html>

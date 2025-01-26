@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scroll to Specific Element</title>
+</head>
+<body>
+    <h1>Scroll to Specific Element</h1>
+    <p>Click the button to scroll to the "Target Element" section.</p>
+    <button id="scrollToElementBtn">Scroll to Target Element</button>
+
+    <div style="height: 1500px;">Content here to make the page scrollable...</div>
+
+    <div id="targetElement" style="height: 200px; background-color: lightblue;">
+        <h2>hii this is new content of target machine</h2>
+        <p>when u scroll to specific target u will land up here.</p>
+    </div>
+
+    <div style="height: 1500px;">More content here...</div>
+
+    <script>
+        // Function to scroll to a specific element by ID
+        function scrollToElement() {
+            const element = document.getElementById('targetElement');
+            element.scrollIntoView({ behavior: 'smooth' }); // Scrolls smoothly to the element
+        }
+
+        // Attach the event to the button
+        document.getElementById('scrollToElementBtn').addEventListener('click', scrollToElement);
+    </script>
+</body>
+</html>

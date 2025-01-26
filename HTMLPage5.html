@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Browser Detection</title>
+</head>
+<body>
+    <h1>Browser Information</h1>
+    <p><strong>User Agent:</strong> <span id="userAgent"></span></p>
+    <p><strong>Detected Browser:</strong> <span id="browser"></span></p>
+
+    <script>
+        // Get the user agent string
+        const userAgent = window.navigator.userAgent;
+
+        // Function to detect browser
+        function detectBrowser(ua) {
+            if (/chrome|chromium|crios/i.test(ua) && !/edg/i.test(ua)) {
+                return "Google Chrome";
+            } else if (/firefox|fxios/i.test(ua)) {
+                return "Mozilla Firefox";
+            } else if (/headless|bot|crawler|spider|phantomjs|selenium/i.test(ua)) {
+                return "Automation Tool Detected";
+            } else {
+                return "Unknown Browser";
+            }
+        }
+
+        // Get browser name
+        const browserName = detectBrowser(userAgent);
+
+        // Log results to console
+        console.log("User Agent:", userAgent);
+        console.log("Detected Browser:", browserName);
+
+        // Display on webpage
+        document.getElementById("userAgent").textContent = userAgent;
+        document.getElementById("browser").textContent = browserName;
+    </script>
+</body>
+</html>

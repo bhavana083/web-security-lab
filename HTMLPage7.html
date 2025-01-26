@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Popup Window Example</title>
+</head>
+<body>
+    <h1>Open a Popup Window</h1>
+    <button onclick="openPopup()">Click here</button>
+
+    <script>
+        function openPopup() {
+            // Open a new window with specific properties
+            const popupWindow = window.open(
+                "https://example.com",  // URL to open in the popup
+                "popupWindow",          // Name of the window
+                "width=600,height=400,scrollbars=yes,resizable=yes"  // Window properties
+            );
+
+            // Check if the window opened successfully
+            if (popupWindow) {
+                console.log("Popup window opened successfully");
+            } else {
+                console.log("Failed to open the popup window.");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTPS Check</title>
+</head>
+<body>
+    <h1>Check for HTTPS</h1>
+    <p>This page checks if the current URL uses HTTPS.</p>
+
+    <script>
+        // Check if the current URL uses "https"
+        if (window.location.protocol !== "https:") {
+            alert("This page is not secure. It's using HTTP instead of HTTPS. For security reasons, please ensure that your connection is encrypted.");
+            // Suggest measures to handle the non-secure page
+            console.log("You should consider switching to HTTPS by obtaining an SSL certificate and configuring your server.");
+        } else {
+            console.log("The page is secure. It uses HTTPS.");
+        }
+    </script>
+</body>
+</html>

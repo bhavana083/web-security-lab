@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Page</title>
+</head>
+<body>
+    <h1>Check and Modify Title</h1>
+    <p>This page checks the title and modifies it if necessary.</p>
+
+    <script>
+        // Retrieve and log the current title
+        let currentTitle = document.title;
+        console.log("Current Page Title: " + currentTitle);
+
+        // Check if the title contains the word "Secure"
+        if (!currentTitle.includes("Secure")) {
+            // Modify the title to include a security warning
+            document.title = currentTitle + " - Secure Warning: Ensure Your Connection is Secure!";
+        } else {
+            console.log("Title already contains 'Secure'. No changes made.");
+        }
+    </script>
+</body>
+</html>
